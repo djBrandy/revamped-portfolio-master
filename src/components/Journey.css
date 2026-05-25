@@ -1,0 +1,167 @@
+.journey {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(26, 26, 46, 0.8) 100%);
+}
+
+.journey-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 4rem;
+  line-height: 1.2;
+}
+
+.timeline {
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #00ffff, #ff00ff);
+}
+
+.milestone {
+  position: relative;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.milestone-marker {
+  position: relative;
+  z-index: 2;
+}
+
+.marker-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #00ffff;
+  border: 3px solid #0a0a0a;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  position: relative;
+  z-index: 3;
+}
+
+.milestone-education .marker-dot {
+  background: #00ffff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+.milestone-leadership .marker-dot {
+  background: #ff00ff;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+}
+
+.milestone-mentorship .marker-dot {
+  background: #ffff00;
+  box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
+}
+
+.milestone-innovation .marker-dot {
+  background: #00ff00;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.milestone-content {
+  flex: 1;
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.milestone-content:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 40px rgba(0, 255, 255, 0.2);
+}
+
+.milestone-year {
+  font-size: 1.2rem;
+  color: #00ffff;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.milestone-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.milestone-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #b0b0b0;
+  margin-bottom: 1.5rem;
+}
+
+.milestone-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: rgba(0, 255, 255, 0.1);
+  color: #00ffff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.milestone-leadership .tech-tag {
+  background: rgba(255, 0, 255, 0.1);
+  color: #ff00ff;
+  border-color: rgba(255, 0, 255, 0.2);
+}
+
+.milestone-mentorship .tech-tag {
+  background: rgba(255, 255, 0, 0.1);
+  color: #ffff00;
+  border-color: rgba(255, 255, 0, 0.2);
+}
+
+.milestone-innovation .tech-tag {
+  background: rgba(0, 255, 0, 0.1);
+  color: #00ff00;
+  border-color: rgba(0, 255, 0, 0.2);
+}
+
+.tech-tag:hover {
+  transform: scale(1.05);
+  background: rgba(0, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 1rem;
+  }
+  
+  .milestone {
+    gap: 1rem;
+  }
+  
+  .milestone-content {
+    padding: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
