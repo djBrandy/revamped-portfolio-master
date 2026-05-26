@@ -190,3 +190,81 @@ toggleButton.addEventListener('click', () => {
 * The navigation bar is responsive and will hide the links on smaller screens.
 * The toggle button will appear on smaller screens and can be used to show and hide the links.
 * The JavaScript code adds an event listener to the toggle button to toggle the `show` class on the nav links.
+
+### Revamped Portfolio Master: Responsive Navigation Bar
+#### HTML
+```html
+<nav class="nav-bar">
+  <div class="nav-logo">
+    <a href="#">Portfolio</a>
+  </div>
+  <div class="nav-links">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="nav-toggle">
+    <button onclick="toggleNav()">&#9776;</button>
+  </div>
+</nav>
+```
+#### CSS
+```css
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+}
+
+.nav-logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
+```
+#### JavaScript
+```javascript
+function toggleNav() {
+  var navLinks = document.querySelector('.nav-links');
+  if (navLinks.style.display === 'block') {
+    navLinks.style.display = 'none';
+  } else {
+    navLinks.style.display = 'block';
+  }
+}
+```
+### Example Use Case
+This code snippet creates a responsive navigation bar that toggles on smaller screens. The navigation bar includes a logo, links to different sections of the portfolio, and a toggle button that appears on smaller screens. When the toggle button is clicked, the navigation links are displayed or hidden.
